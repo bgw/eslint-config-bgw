@@ -1,0 +1,231 @@
+---
+# Derived from FBJS' eslintrc (which I originally made), but generally more
+# strict.
+parser: babel-eslint
+
+env:
+  node: true
+  es6: true
+
+rules:
+  # Possible Errors <http://eslint.org/docs/rules/#possible-errors>
+  comma-dangle: [2, always-multiline]
+  no-cond-assign: 0
+  no-console: 1
+  no-constant-condition: 2
+  no-control-regex: 2
+  no-debugger: 2
+  no-dupe-args: 2
+  no-dupe-keys: 2
+  no-duplicate-case: 2
+  no-empty-character-class: 2
+  # if you have an empty `catch (ex) {}` block add a `// do nothing` comment
+  no-empty: 0
+  # can cause subtle bugs in IE 8
+  no-ex-assign: 1
+  no-extra-boolean-cast: 2
+  # warn only about extra parens around function expressions
+  no-extra-parens: [2, functions]
+  no-extra-semi: 2
+  no-func-assign: 2
+  # babel and es2015 allow block-scoped functions
+  no-inner-declarations: 0
+  no-invalid-regexp: 2
+  no-irregular-whitespace: 2
+  no-negated-in-lhs: 2
+  no-obj-calls: 2
+  no-regex-spaces: 2
+  no-sparse-arrays: 2
+  no-unexpected-multiline: 2
+  no-unreachable: 2
+  use-isnan: 2
+  valid-jsdoc: 1
+  valid-typeof: 2
+
+  # Best Practices <http://eslint.org/docs/rules/#best-practices>
+  accessor-pairs: [1, {setWithoutGet: true}]
+  block-scoped-var: 1
+  complexity: [1, 5]
+  consistent-return: 2
+  curly: [2, all]
+  default-case: 0
+  dot-location: [2, property]
+  dot-notation: [2, {allowKeywords: true}]
+  eqeqeq: [2, allow-null]
+  guard-for-in: 1
+  no-alert: 1
+  no-caller: 2
+  no-case-declarations: 0
+  no-div-regex: 0
+  no-else-return: 0
+  no-empty-label: 2
+  # `foo == null` is actually useful: we allow it in the eqeqeq rule
+  no-eq-null: 0
+  no-eval: 2
+  no-extend-native: 2
+  no-extra-bind: 2
+  no-fallthrough: 1
+  no-floating-decimal: 2
+  no-implicit-coercion: 0
+  no-implied-eval: 2
+  no-invalid-this: 0
+  no-iterator: 2
+  no-labels: 2
+  no-lone-blocks: 2
+  # doesn't matter if I enforce let/const
+  no-loop-func: 0
+  no-magic-numbers: 0
+  no-multi-spaces: 2
+  no-multi-str: 2
+  no-native-reassign: [2, {exceptions: [Map, Set]}]
+  no-new-func: 2
+  no-new: 2
+  no-octal-escape: 2
+  no-octal: 2
+  no-param-reassign: 0
+  no-process-env: 1
+  no-proto: 2
+  no-redeclare: 2
+  no-return-assign: 0
+  no-script-url: 2
+  no-self-compare: 2
+  no-sequences: 2
+  no-throw-literal: 2
+  no-unused-expressions: 2
+  no-useless-call: 2
+  no-useless-concat: 1
+  no-void: 0
+  no-warning-comments: 1
+  no-with: 2
+  radix: 2
+  vars-on-top: 0
+  wrap-iife: [2, inside]
+  yoda: 2
+
+  # Strict Mode <http://eslint.org/docs/rules/#strict-mode>
+  # babel should add this, not us
+  strict: [2, never]
+
+  # Variables <http://eslint.org/docs/rules/#variables>
+  init-declarations: 0
+  no-catch-shadow: 1
+  no-delete-var: 2
+  no-label-var: 2
+  no-shadow-restricted-names: 2
+  no-shadow: 2
+  no-undef-init: 0
+  no-undef: 2
+  # using undefined is safe because we enforce no-shadow-restricted-names
+  no-undefined: 0
+  no-unused-vars: [1, {args: none}]
+  no-use-before-define: [1, nofunc]
+
+  # Node.js <http://eslint.org/docs/rules/#nodejs>
+  callback-return: 1
+  global-require: 0
+  handle-callback-err: 1
+  no-mixed-requires: 0
+  no-new-require: 1
+  no-path-concat: 1
+  no-process-exit: 1
+  no-restricted-modules: 0
+  no-sync: 1
+
+  # Stylistic Issues <http://eslint.org/docs/rules/#stylistic-issues>
+  # See also: https://our.intern.facebook.com/intern/dex/style-guide/
+  array-bracket-spacing: [2, never]
+  block-spacing: [2, always]
+  brace-style: [2, 1tbs, {allowSingleLine: true}]
+  camelcase: [1, {properties: always}]
+  comma-spacing: [2, {before: false, after: true}]
+  comma-style: [2, last]
+  computed-property-spacing: [2, never]
+  # we may use more contextually relevant names for this than self
+  consistent-this: [0, self]
+  eol-last: 2
+  # already handled by babel-plugin-transform-es2015-function-name
+  func-names: 0
+  func-style: [2, declaration]
+  id-length: 0
+  id-match: 0
+  indent: [2, 2, {SwitchCase: 1, VariableDeclarator: 1}]
+  # this diverges from FB coding standards
+  jsx-quotes: [2, prefer-single]
+  key-spacing: [2, {beforeColon: false, afterColon: true}]
+  linebreak-style: [2, unix]
+  lines-around-comment: 0
+  max-depth: [1, 5]
+  max-len: [1, 80, 2, {ignoreUrls: true}]
+  max-nested-callbacks: [1, 3]
+  max-params: [1, 5]
+  max-statements: [1, 25]
+  new-cap: [1, {capIsNew: true, newIsCap: false}]
+  new-parens: 2
+  newline-after-var: 0
+  no-array-constructor: 2
+  no-bitwise: 0
+  no-continue: 0
+  no-inline-comments: 0
+  no-lonely-if: 2
+  no-mixed-spaces-and-tabs: 2
+  no-multiple-empty-lines: 0
+  no-negated-condition: 0
+  no-nested-ternary: 2
+  no-new-object: 2
+  no-plusplus: 0
+  no-restricted-syntax: 0
+  no-spaced-func: 2
+  no-ternary: 0
+  no-trailing-spaces: [2, {skipBlankLines: false}]
+  no-underscore-dangle: 0
+  no-unneeded-ternary: 2
+  object-curly-spacing: [2, never]
+  # this diverges from FB coding standards
+  one-var: 0
+  operator-assignment: [2, always]
+  operator-linebreak: [2, after]
+  padded-blocks: 0
+  quote-props: [2, as-needed]
+  quotes: [2, single, avoid-escape]
+  require-jsdoc: 0
+  semi-spacing: [2, {before: false, after: true}]
+  semi: [2, always]
+  sort-vars: 0
+  space-after-keywords: [2, always]
+  space-before-blocks: [2, always]
+  space-before-function-paren: [2, {anonymous: never, named: never}]
+  space-before-keywords: [2, always]
+  space-in-parens: [2, never]
+  space-infix-ops: 0
+  space-return-throw-case: 2
+  space-unary-ops: [2, {words: true, nonwords: false}]
+  spaced-comment: [2, always, {block: {exceptions: ["*"]}}]
+  wrap-regex: 0
+
+  # ECMAScript 6 <http://eslint.org/docs/rules/#ecmascript-6>
+  arrow-body-style: [2, as-needed]
+  # this diverges from FB coding standards
+  arrow-parens: [2, as-needed]
+  arrow-spacing: [2, {before: true, after: true}]
+  constructor-super: 2
+  # https://github.com/babel/babel-eslint#known-issues
+  generator-star-spacing: 0
+  # soon to be deprecated: https://github.com/eslint/eslint/issues/4417
+  no-arrow-condition: 0
+  no-class-assign: 2
+  no-const-assign: 2
+  no-dupe-class-members: 2
+  no-this-before-super: 2
+  no-var: 2
+  object-shorthand: [2, always]
+  prefer-arrow-callback: 2
+  prefer-const: 2
+  # I'll revisit this later
+  prefer-reflect: 0
+  prefer-spread: 2
+  # would inhibit empty string concatenation for coercion
+  prefer-template: 0
+  require-yield: 0
+
+  # Legacy <http://eslint.org/docs/rules/#legacy>
+  no-plusplus: 0
