@@ -120,7 +120,7 @@ rules:
   # using undefined is safe because we enforce no-shadow-restricted-names
   no-undefined: 0
   no-unused-vars: [1, {args: none}]
-  no-use-before-define: [1, nofunc]
+  no-use-before-define: 0
 
   # Node.js <http://eslint.org/docs/rules/#nodejs>
   callback-return: 1
