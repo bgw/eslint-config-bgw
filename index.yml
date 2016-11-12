@@ -12,230 +12,232 @@ env:
 
 rules:
   # Possible Errors <http://eslint.org/docs/rules/#possible-errors>
-  comma-dangle: [2, always-multiline]
-  no-cond-assign: 0
-  no-console: 1
-  no-constant-condition: 2
-  no-control-regex: 2
-  no-debugger: 1
-  no-dupe-args: 2
-  no-dupe-keys: 2
-  no-duplicate-case: 2
-  no-empty-character-class: 2
+  comma-dangle: [error, always-multiline]
+  no-cond-assign: off
+  no-console: warn
+  no-constant-condition: error
+  no-control-regex: error
+  no-debugger: warn
+  no-dupe-args: error
+  no-dupe-keys: error
+  no-duplicate-case: error
+  no-empty-character-class: error
   # if you have an empty `catch (ex) {}` block add a `// do nothing` comment
-  no-empty: 0
+  no-empty: off
   # can cause subtle bugs in IE 8
-  no-ex-assign: 1
-  no-extra-boolean-cast: 2
+  no-ex-assign: warn
+  no-extra-boolean-cast: error
   # warn only about extra parens around function expressions
-  no-extra-parens: [2, functions]
-  no-extra-semi: 2
-  no-func-assign: 2
+  no-extra-parens: [error, functions]
+  no-extra-semi: error
+  no-func-assign: error
   # babel and es2015 allow block-scoped functions
-  no-inner-declarations: 0
-  no-invalid-regexp: 2
-  no-irregular-whitespace: 2
-  no-negated-in-lhs: 2
-  no-obj-calls: 2
-  no-regex-spaces: 2
-  no-sparse-arrays: 2
-  no-unexpected-multiline: 2
-  no-unreachable: 2
-  use-isnan: 2
-  valid-jsdoc: 1
-  valid-typeof: 2
+  no-inner-declarations: off
+  no-invalid-regexp: error
+  no-irregular-whitespace: error
+  no-negated-in-lhs: error
+  no-obj-calls: error
+  no-regex-spaces: error
+  no-sparse-arrays: error
+  no-unexpected-multiline: error
+  no-unreachable: error
+  use-isnan: error
+  valid-jsdoc: warn
+  valid-typeof: error
 
   # Best Practices <http://eslint.org/docs/rules/#best-practices>
-  accessor-pairs: [1, {setWithoutGet: true}]
-  block-scoped-var: 1
-  complexity: [1, 5]
-  consistent-return: 2
-  curly: [2, all]
-  default-case: 0
-  dot-location: [2, property]
-  dot-notation: [2, {allowKeywords: true}]
-  eqeqeq: [2, allow-null]
-  guard-for-in: 1
-  no-alert: 1
-  no-caller: 2
-  no-case-declarations: 0
-  no-div-regex: 0
-  no-else-return: 0
+  accessor-pairs: [warn, {setWithoutGet: true}]
+  block-scoped-var: warn
+  complexity: [warn, 5]
+  consistent-return: error
+  curly: [error, all]
+  default-case: off
+  dot-location: [error, property]
+  dot-notation: [error, {allowKeywords: true}]
+  eqeqeq: [error, allow-null]
+  guard-for-in: warn
+  no-alert: warn
+  no-caller: error
+  no-case-declarations: off
+  no-div-regex: off
+  no-else-return: off
   # `foo == null` is actually useful: we allow it in the eqeqeq rule
-  no-eq-null: 0
-  no-eval: 2
-  no-extend-native: 2
-  no-extra-bind: 2
-  no-fallthrough: 1
-  no-floating-decimal: 2
-  no-implicit-coercion: 0
-  no-implied-eval: 2
-  no-invalid-this: 0
-  no-iterator: 2
-  no-labels: 2
-  no-lone-blocks: 2
+  no-eq-null: off
+  no-eval: error
+  no-extend-native: error
+  no-extra-bind: error
+  no-fallthrough: warn
+  no-floating-decimal: error
+  no-implicit-coercion: off
+  no-implied-eval: error
+  no-invalid-this: off
+  no-iterator: error
+  no-labels: error
+  no-lone-blocks: error
   # doesn't matter if I enforce let/const
-  no-loop-func: 0
-  no-magic-numbers: 0
-  no-multi-spaces: 2
-  no-multi-str: 2
-  no-native-reassign: [2, {exceptions: [Map, Set]}]
-  no-new-func: 2
-  no-new: 2
-  no-octal-escape: 2
-  no-octal: 2
-  no-param-reassign: 0
-  no-process-env: 1
-  no-proto: 2
-  no-redeclare: 2
-  no-return-assign: 0
-  no-script-url: 2
-  no-self-compare: 2
-  no-sequences: 2
-  no-throw-literal: 2
-  no-unused-expressions: 2
-  no-useless-call: 2
-  no-useless-concat: 1
-  no-void: 0
-  no-warning-comments: 1
-  no-with: 2
-  radix: 2
-  vars-on-top: 0
-  wrap-iife: [2, inside]
-  yoda: 2
+  no-loop-func: off
+  no-magic-numbers: off
+  no-multi-spaces: error
+  no-multi-str: error
+  no-native-reassign: [error, {exceptions: [Map, Set]}]
+  no-new-func: error
+  no-new: error
+  no-octal-escape: error
+  no-octal: error
+  no-param-reassign: off
+  no-process-env: warn
+  no-proto: error
+  no-redeclare: error
+  no-return-assign: off
+  no-script-url: error
+  no-self-compare: error
+  no-sequences: error
+  no-throw-literal: error
+  no-unused-expressions: error
+  no-useless-call: error
+  no-useless-concat: warn
+  no-void: off
+  no-warning-comments: warn
+  no-with: error
+  radix: error
+  vars-on-top: off
+  wrap-iife: [error, inside]
+  yoda: error
 
   # Strict Mode <http://eslint.org/docs/rules/#strict-mode>
   # babel should add this, not us
-  strict: [2, never]
+  strict: [error, never]
 
   # Variables <http://eslint.org/docs/rules/#variables>
-  init-declarations: 0
-  no-catch-shadow: 1
-  no-delete-var: 2
-  no-label-var: 2
-  no-shadow-restricted-names: 2
-  no-shadow: 2
-  no-undef-init: 0
-  no-undef: 2
+  init-declarations: off
+  no-catch-shadow: warn
+  no-delete-var: error
+  no-label-var: error
+  no-restricted-globals: off
+  no-shadow-restricted-names: error
+  no-shadow: error
+  no-undef-init: off
+  no-undef: error
   # using undefined is safe because we enforce no-shadow-restricted-names
-  no-undefined: 0
-  no-unused-vars: [1, {args: none}]
-  no-use-before-define: 0
+  no-undefined: off
+  no-unused-vars: [warn, {args: none}]
+  no-use-before-define: off
 
   # Node.js <http://eslint.org/docs/rules/#nodejs>
-  callback-return: 1
-  global-require: 0
-  handle-callback-err: 1
-  no-mixed-requires: 0
-  no-new-require: 1
-  no-path-concat: 1
-  no-process-exit: 1
-  no-restricted-modules: 0
-  no-sync: 1
+  callback-return: warn
+  global-require: off
+  handle-callback-err: warn
+  no-mixed-requires: off
+  no-new-require: warn
+  no-path-concat: warn
+  no-process-exit: warn
+  no-restricted-modules: off
+  no-sync: warn
 
   # Stylistic Issues <http://eslint.org/docs/rules/#stylistic-issues>
   # see babel/array-bracket-spacing
-  array-bracket-spacing: 0
-  block-spacing: [2, always]
-  brace-style: [2, 1tbs, {allowSingleLine: true}]
-  camelcase: [1, {properties: always}]
-  comma-spacing: [2, {before: false, after: true}]
-  comma-style: [2, last]
-  computed-property-spacing: [2, never]
+  array-bracket-spacing: off
+  block-spacing: [error, always]
+  brace-style: [error, 1tbs, {allowSingleLine: true}]
+  camelcase: [warn, {properties: always}]
+  comma-spacing: [error, {before: false, after: true}]
+  comma-style: [error, last]
+  computed-property-spacing: [error, never]
   # we may use more contextually relevant names for this than self
-  consistent-this: [0, self]
-  eol-last: 2
+  consistent-this: [off, self]
+  eol-last: error
   # already handled by babel-plugin-transform-es2015-function-name
-  func-names: 0
-  func-style: [2, declaration]
-  id-length: 0
-  id-match: 0
-  indent: [2, 2, {SwitchCase: 1, VariableDeclarator: 1}]
+  func-names: off
+  func-style: [error, declaration]
+  id-length: off
+  id-match: off
+  indent: [error, 2, {SwitchCase: 1, VariableDeclarator: 1}]
   # this diverges from FB coding standards
-  jsx-quotes: [2, prefer-single]
-  key-spacing: [2, {beforeColon: false, afterColon: true}]
-  keyword-spacing: [2, {before: true, after: true}]
-  linebreak-style: [2, unix]
-  lines-around-comment: 0
-  max-depth: [1, 5]
-  max-len: [1, 80, 2, {ignoreUrls: true}]
-  max-nested-callbacks: [1, 3]
-  max-params: [1, 5]
-  max-statements: [1, 25]
+  jsx-quotes: [error, prefer-single]
+  key-spacing: [error, {beforeColon: false, afterColon: true}]
+  keyword-spacing: [error, {before: true, after: true}]
+  linebreak-style: [error, unix]
+  lines-around-comment: off
+  max-depth: [warn, 5]
+  max-len: [warn, 80, 2, {ignoreUrls: true}]
+  max-nested-callbacks: [warn, 3]
+  max-params: [warn, 5]
+  max-statements: [warn, 25]
   # see babel/new-cap
-  new-cap: 0
-  new-parens: 2
-  newline-after-var: 0
-  no-array-constructor: 2
-  no-bitwise: 0
-  no-continue: 0
-  no-inline-comments: 0
-  no-lonely-if: 2
-  no-mixed-spaces-and-tabs: 2
-  no-multiple-empty-lines: 0
-  no-negated-condition: 0
-  no-nested-ternary: 2
-  no-new-object: 2
-  no-plusplus: 0
-  no-restricted-syntax: 0
-  no-spaced-func: 2
-  no-ternary: 0
-  no-trailing-spaces: [2, {skipBlankLines: false}]
-  no-underscore-dangle: 0
-  no-unneeded-ternary: 2
+  new-cap: off
+  new-parens: error
+  newline-after-var: off
+  newline-before-return: off
+  no-array-constructor: error
+  no-bitwise: off
+  no-continue: off
+  no-inline-comments: off
+  no-lonely-if: error
+  no-mixed-spaces-and-tabs: error
+  no-multiple-empty-lines: off
+  no-negated-condition: off
+  no-nested-ternary: error
+  no-new-object: error
+  no-plusplus: off
+  no-restricted-syntax: off
+  no-spaced-func: error
+  no-ternary: off
+  no-trailing-spaces: [error, {skipBlankLines: false}]
+  no-underscore-dangle: off
+  no-unneeded-ternary: error
   # see babel/object-curly-spacing
-  object-curly-spacing: 0
+  object-curly-spacing: off
   # this diverges from FB coding standards
-  one-var: 0
-  operator-assignment: [2, always]
-  operator-linebreak: [2, after]
-  padded-blocks: 0
-  quote-props: [2, as-needed]
-  quotes: [2, single, avoid-escape]
-  require-jsdoc: 0
-  semi-spacing: [2, {before: false, after: true}]
-  semi: [2, always]
-  sort-vars: 0
-  space-before-blocks: [2, always]
-  space-before-function-paren: [2, {anonymous: never, named: never}]
-  space-in-parens: [2, never]
-  space-infix-ops: 0
-  space-unary-ops: [2, {words: true, nonwords: false}]
-  spaced-comment: [2, always, {block: {exceptions: ["*"]}}]
-  wrap-regex: 0
+  one-var: off
+  operator-assignment: [error, always]
+  operator-linebreak: [error, after]
+  padded-blocks: off
+  quote-props: [error, as-needed]
+  quotes: [error, single, avoid-escape]
+  require-jsdoc: off
+  semi-spacing: [error, {before: false, after: true}]
+  semi: [error, always]
+  sort-vars: off
+  space-before-blocks: [error, always]
+  space-before-function-paren: [error, {anonymous: never, named: never}]
+  space-in-parens: [error, never]
+  space-infix-ops: off
+  space-unary-ops: [error, {words: true, nonwords: false}]
+  spaced-comment: [error, always, {block: {exceptions: ["*"]}}]
+  wrap-regex: off
 
   # ECMAScript 6 <http://eslint.org/docs/rules/#ecmascript-6>
-  arrow-body-style: [2, as-needed]
+  arrow-body-style: [error, as-needed]
   # see babel/arrow-parens
-  arrow-parens: 0
-  arrow-spacing: [2, {before: true, after: true}]
-  constructor-super: 2
+  arrow-parens: off
+  arrow-spacing: [error, {before: true, after: true}]
+  constructor-super: error
   # see babel/generator-star-spacing
-  generator-star-spacing: 0
-  no-class-assign: 2
-  no-confusing-arrow: 0
-  no-const-assign: 2
-  no-dupe-class-members: 2
-  no-this-before-super: 2
-  no-var: 2
+  generator-star-spacing: off
+  no-class-assign: error
+  no-confusing-arrow: off
+  no-const-assign: error
+  no-dupe-class-members: error
+  no-this-before-super: error
+  no-var: error
   # see babel/object-shorthand
-  object-shorthand: 0
-  prefer-arrow-callback: 2
-  prefer-const: 2
+  object-shorthand: off
+  prefer-arrow-callback: error
+  prefer-const: error
   # I'll revisit this later
-  prefer-reflect: 0
-  prefer-spread: 2
+  prefer-reflect: off
+  prefer-spread: error
   # would inhibit empty string concatenation for coercion
-  prefer-template: 0
-  require-yield: 0
+  prefer-template: off
+  require-yield: off
 
   # eslint-plugin-babel <https://github.com/babel/eslint-plugin-babel>
   # I feel like this creates more parity with anonymous functions
-  babel/generator-star-spacing: [1, {before: false, after: true}]
-  babel/new-cap: [1, {capIsNew: true, newIsCap: false}]
-  babel/array-bracket-spacing: [2, never]
-  babel/object-curly-spacing: [2, never]
-  babel/object-shorthand: [2, always]
+  babel/generator-star-spacing: [warn, {before: false, after: true}]
+  babel/new-cap: [warn, {capIsNew: true, newIsCap: false}]
+  babel/array-bracket-spacing: [error, never]
+  babel/object-curly-spacing: [error, never]
+  babel/object-shorthand: [error, always]
   # this diverges from FB coding standards
-  babel/arrow-parens: [2, as-needed]
-  babel/no-await-in-loop: 1
+  babel/arrow-parens: [error, as-needed]
+  babel/no-await-in-loop: warn
