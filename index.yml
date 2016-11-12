@@ -96,6 +96,7 @@ rules:
   no-unused-expressions: error
   no-useless-call: error
   no-useless-concat: warn
+  no-useless-escape: error
   no-void: off
   no-warning-comments: warn
   no-with: error
@@ -120,7 +121,7 @@ rules:
   no-undef: error
   # using undefined is safe because we enforce no-shadow-restricted-names
   no-undefined: off
-  no-unused-vars: [warn, {args: none}]
+  no-unused-vars: [warn, {args: none, vars: all, caughtErrors: none}]
   no-use-before-define: off
 
   # Node.js <http://eslint.org/docs/rules/#nodejs>
@@ -162,6 +163,7 @@ rules:
   max-len: [warn, 80, 2, {ignoreUrls: true}]
   max-nested-callbacks: [warn, 3]
   max-params: [warn, 5]
+  max-statements-per-line: [warn, {max: 3}]
   max-statements: [warn, 25]
   # see babel/new-cap
   new-cap: off
@@ -202,7 +204,7 @@ rules:
   space-before-function-paren: [error, {anonymous: never, named: never}]
   space-in-parens: [error, never]
   space-infix-ops: off
-  space-unary-ops: [error, {words: true, nonwords: false}]
+  space-unary-ops: [error, {words: true, nonwords: false, overrides: {}}]
   spaced-comment: [error, always, {block: {exceptions: ["*"]}}]
   wrap-regex: off
 
@@ -218,6 +220,7 @@ rules:
   no-confusing-arrow: off
   no-const-assign: error
   no-dupe-class-members: error
+  no-duplicate-imports: [error, {includeExports: false}]
   no-this-before-super: error
   no-var: error
   # see babel/object-shorthand
