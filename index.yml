@@ -26,24 +26,26 @@ rules:
   # can cause subtle bugs in IE 8
   no-ex-assign: warn
   no-extra-boolean-cast: error
-  # warn only about extra parens around unabiguous stuff
-  no-extra-parens: [warn, all, {conditionalAssign: false, nestedBinaryExpressions: false, returnAssign: false}]
+  no-extra-parens: off
   no-extra-semi: error
   no-func-assign: error
   # babel and es2015 allow block-scoped functions
   no-inner-declarations: off
   no-invalid-regexp: error
   no-irregular-whitespace: error
-  no-negated-in-lhs: error
+  # deprecated by no-unsafe-negation
+  no-negated-in-lhs: off
   no-obj-calls: error
   no-prototype-builtins: error
   no-regex-spaces: error
   no-sparse-arrays: error
+  no-template-curly-in-string: warn
   no-unexpected-multiline: error
   no-unreachable: error
   no-unsafe-finally: error
+  no-unsafe-negation: error
   use-isnan: error
-  valid-jsdoc: warn
+  valid-jsdoc: off
   valid-typeof: error
 
   # Best Practices <http://eslint.org/docs/rules/#best-practices>
@@ -55,7 +57,7 @@ rules:
   default-case: off
   dot-location: [error, property]
   dot-notation: [error, {allowKeywords: true}]
-  eqeqeq: [error, allow-null]
+  eqeqeq: [error, always, {'null': ignore}]
   guard-for-in: warn
   no-alert: warn
   no-caller: error
@@ -69,8 +71,10 @@ rules:
   no-extra-bind: error
   no-fallthrough: warn
   no-floating-decimal: error
+  no-global-assign: [error, {exceptions: [Map, Set]}]
   no-implicit-coercion: off
   no-implied-eval: error
+  # see babel/no-invalid-this
   no-invalid-this: off
   no-iterator: error
   no-labels: error
@@ -80,7 +84,8 @@ rules:
   no-magic-numbers: off
   no-multi-spaces: error
   no-multi-str: error
-  no-native-reassign: [error, {exceptions: [Map, Set]}]
+  # deprecated by no-global-assign
+  no-native-reassign: off
   no-new-func: error
   no-new: error
   no-octal-escape: error
@@ -91,6 +96,7 @@ rules:
   no-redeclare: error
   no-return-assign: off
   no-script-url: error
+  no-self-assign: [error, {props: true}]
   no-self-compare: error
   no-sequences: error
   no-throw-literal: error
@@ -148,6 +154,7 @@ rules:
   # we may use more contextually relevant names for this than self
   consistent-this: [off, self]
   eol-last: error
+  func-call-spacing: [error, never]
   # already handled by babel-plugin-transform-es2015-function-name
   func-names: off
   func-style: [error, declaration]
@@ -185,7 +192,9 @@ rules:
   no-new-object: error
   no-plusplus: off
   no-restricted-syntax: off
-  no-spaced-func: error
+  # deprecated by func-call-spacing
+  no-spaced-func: off
+  no-tabs: error
   no-ternary: off
   no-trailing-spaces: [error, {skipBlankLines: false}]
   no-underscore-dangle: off
@@ -205,6 +214,7 @@ rules:
   require-jsdoc: off
   semi-spacing: [error, {before: false, after: true}]
   semi: [error, always]
+  sort-keys: off
   sort-vars: off
   space-before-blocks: [error, always]
   space-before-function-paren: [error, {anonymous: never, named: never}]
@@ -254,4 +264,7 @@ rules:
   babel/object-shorthand: [error, always]
   # this diverges from FB coding standards
   babel/arrow-parens: [error, as-needed]
+  babel/no-invalid-this: off
   babel/no-await-in-loop: warn
+  babel/flow-object-type: [error, comma]
+  babel/func-params-comma-dangle: [error, always-multiline]
