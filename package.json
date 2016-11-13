@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bgw",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "author": "Benjamin Woodruff <npm@benjam.info>",
   "description": "Personal ESLint configuration",
   "repository": "git://github.com/bgw/eslint-config-bgw.git",
