@@ -22,13 +22,12 @@ rules:
   no-dupe-keys: error
   no-duplicate-case: error
   no-empty-character-class: error
-  # if you have an empty `catch (ex) {}` block add a `// do nothing` comment
-  no-empty: off
+  no-empty: [warn, {allowEmptyCatch: true}]
   # can cause subtle bugs in IE 8
   no-ex-assign: warn
   no-extra-boolean-cast: error
-  # warn only about extra parens around function expressions
-  no-extra-parens: [error, functions]
+  # warn only about extra parens around unabiguous stuff
+  no-extra-parens: [warn, all, {conditionalAssign: false, nestedBinaryExpressions: false, returnAssign: false}]
   no-extra-semi: error
   no-func-assign: error
   # babel and es2015 allow block-scoped functions
@@ -41,6 +40,7 @@ rules:
   no-sparse-arrays: error
   no-unexpected-multiline: error
   no-unreachable: error
+  no-unsafe-finally: error
   use-isnan: error
   valid-jsdoc: warn
   valid-typeof: error
@@ -189,13 +189,14 @@ rules:
   no-unneeded-ternary: error
   # see babel/object-curly-spacing
   object-curly-spacing: off
+  object-property-newline: [error, {allowMultiplePropertiesPerLine: true}]
   # this diverges from FB coding standards
   one-var: off
   operator-assignment: [error, always]
   operator-linebreak: [error, after]
   padded-blocks: off
   quote-props: [error, as-needed]
-  quotes: [error, single, avoid-escape]
+  quotes: [error, single, {avoidEscape: true, allowTemplateLiterals: true}]
   require-jsdoc: off
   semi-spacing: [error, {before: false, after: true}]
   semi: [error, always]
@@ -222,11 +223,12 @@ rules:
   no-dupe-class-members: error
   no-duplicate-imports: [error, {includeExports: false}]
   no-this-before-super: error
+  no-useless-computed-key: error
   no-var: error
   # see babel/object-shorthand
   object-shorthand: off
-  prefer-arrow-callback: error
-  prefer-const: error
+  prefer-arrow-callback: [error, {allowNamedFunctions: false, allowUnboundThis: true}]
+  prefer-const: [error, {destructuring: all, ignoreReadBeforeAssign: false}]
   # I'll revisit this later
   prefer-reflect: off
   prefer-spread: error
