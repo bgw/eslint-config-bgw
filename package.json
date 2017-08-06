@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bgw",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "author": "Benjamin Woodruff <npm@benjam.info>",
   "description": "Personal ESLint configuration",
   "repository": "git://github.com/bgw/eslint-config-bgw.git",
@@ -16,16 +16,16 @@
   },
   "license": "BSD-2-Clause",
   "peerDependencies": {
-    "babel-eslint": "^7.1.0",
-    "eslint": "^3.3.1",
-    "eslint-plugin-babel": "^3.3.0"
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.4.0",
+    "eslint-plugin-babel": "^4.1.2"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.0",
-    "eslint": "^3.3.1",
-    "eslint-plugin-babel": "^3.3.0"
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.4.0",
+    "eslint-plugin-babel": "^4.1.2"
   },
   "dependencies": {
-    "js-yaml": "^3.5.3"
+    "js-yaml": "^3.9.1"
   }
 }
